@@ -448,6 +448,14 @@
                         { type: 'item', vi: 'Ứng dụng AI để xử lý tài liệu lớn, kết hợp rà soát thủ công.', en: 'Use AI for large-scale document review with human verification.' },
                         { type: 'item', vi: 'Phát hiện AI hallucination, citation mismatch và factual inconsistency.', en: 'Detect AI hallucinations, citation mismatches, and factual inconsistencies.' },
                         { type: 'item', vi: 'Tận dụng năng lực ngôn ngữ – dịch thuật để phân tích ngữ nghĩa, ngữ cảnh và diễn đạt pháp lý.', en: 'Leverage language and translation expertise to analyze meaning, context, and legal wording.' },
+                        { type: 'center-heading', text: 'Projects' },
+                        { type: 'project-list', items: [
+                            'Marti MEMO / SE Holding & Abrams <span class="inline-block">(Apr, 2026)</span>',
+                            'Discovery Benefits <span class="inline-block">(Apr, 2026)</span>',
+                            'Corporate Whistleblowing 2026 <span class="inline-block">(Apr, 2026)</span>',
+                            'Rufus Lee Reply Brief <span class="inline-block">(Apr, 2026)</span>',
+                            'Iovino v. MSA <span class="inline-block">(Apr – May, 2026)</span>'
+                        ]},
                         { type: 'heading', vi: 'Ghi nhận', en: 'Recognition' },
                         { type: 'item', vi: 'Mệnh danh là "Grim Reaper" của giới kiểm định: Không để lọt bất kỳ lỗi sai nào.', en: 'Dubbed the "Grim Reaper" of validation: Zero errors slip through.' },
                         { type: 'item', vi: 'Tốc độ kiểm định nhanh song hành với độ chính xác tuyệt đối.', en: 'Fast validation speed alongside absolute accuracy.' }
@@ -495,6 +503,18 @@
                             const enPart = `<h5 class="font-bold ${theme.headingColor} mb-2 mt-6">${item.en}</h5>`;
                             rowsHtml += `<div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 w-full"><div>${viPart}</div><div class="hidden md:block">${enPart}</div></div>`;
                             mobileEnHtml += enPart;
+                        } else if (item.type === 'center-heading') {
+                            const centerPart = `<h5 class="font-bold ${theme.headingColor} mb-2 mt-6 w-full text-center">${item.text}</h5>`;
+                            rowsHtml += `<div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 w-full"><div class="col-span-1 md:col-span-2 flex justify-center">${centerPart}</div></div>`;
+                            mobileEnHtml += `<div class="flex justify-center">${centerPart}</div>`;
+                        } else if (item.type === 'project-list') {
+                            let gridItems = '';
+                            item.items.forEach(proj => {
+                                gridItems += `<div class="flex text-gray-400 mb-3"><span class="${theme.bulletColor} mr-3 mt-1">&#8226;</span><div class="!m-0">${proj}</div></div>`;
+                            });
+                            const fullGrid = `<div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 w-full">${gridItems}</div>`;
+                            rowsHtml += fullGrid;
+                            mobileEnHtml += fullGrid;
                         } else if (item.type === 'item') {
                             const viPart = `<div class="flex text-gray-400 mb-3"><span class="${theme.bulletColor} mr-3 mt-1">&#8226;</span><div class="!m-0">${item.vi}</div></div>`;
                             const enPart = `<div class="flex text-gray-400 mb-3"><span class="${theme.bulletColor} mr-3 mt-1">&#8226;</span><div class="!m-0">${item.en}</div></div>`;
