@@ -36,7 +36,7 @@
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            animation: spin-clockwise 30s linear infinite;
+            animation: spin-clockwise 40s linear infinite;
         }
 
         .center-image {
@@ -57,8 +57,8 @@
 
         .role-circle {
             position: absolute;
-            width: 24%;
-            height: 24%;
+            width: 22%;
+            height: 22%;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -66,14 +66,13 @@
             text-align: center;
             font-weight: 600;
             cursor: pointer;
-            /* Transition covers all properties to ensure smooth movement to center */
             transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             padding: 8px;
             border: 3px solid transparent;
             opacity: 0;
             transform: scale(0.5);
-            animation: fadeInScale 0.5s forwards, spin-counter-clockwise 30s linear infinite;
+            animation: fadeInScale 0.5s forwards, spin-counter-clockwise 40s linear infinite;
         }
         
         @keyframes fadeInScale {
@@ -103,7 +102,6 @@
             box-shadow: 0 8px 30px rgba(129, 140, 248, 0.2);
         }
 
-        /* Classes for the centering effect */
         .centered-role {
             width: 40% !important;
             height: 40% !important;
@@ -111,19 +109,18 @@
             top: 50% !important;
             margin-left: -20% !important;
             margin-top: -20% !important;
-            font-size: 1.25rem !important;
+            font-size: 1.15rem !important;
             z-index: 30 !important;
             opacity: 1 !important;
             box-shadow: 0 10px 40px rgba(0,0,0,0.5) !important;
             font-weight: 800 !important;
         }
 
-        /* Hiệu ứng chạy vòng tròn và gom lại cho các vai trò khác */
         .gathered-role {
             left: 50% !important;
             top: 50% !important;
-            margin-left: -12% !important;
-            margin-top: -12% !important;
+            margin-left: -11% !important;
+            margin-top: -11% !important;
             transform: rotate(360deg) scale(0) !important;
             opacity: 0 !important;
             pointer-events: none !important;
@@ -159,7 +156,6 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.5);
         }
 
-        /* Digital Business Card Style */
         .digital-card {
             background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(12px);
@@ -182,7 +178,7 @@
 
         @media (max-width: 767px) {
             .role-circle {
-                font-size: 0.75rem;
+                font-size: 0.65rem;
             }
             .centered-role {
                 font-size: 1rem !important;
@@ -218,7 +214,8 @@
                     <a href="index.html" class="text-gray-300 hover:text-white transition duration-300">English</a>
                     <a href="techlish.html" class="text-gray-300 hover:text-white transition duration-300">Techlish</a>
                     <a href="mmo.html" class="text-gray-300 hover:text-white transition duration-300">MMO</a>
-                    <a href="deals.html" class="text-gray-300 hover:text-white transition duration-300">Deals</a>
+                    <a href="deal.html" class="text-gray-300 hover:text-white transition duration-300">Deals</a>
+                    <a href="misc.html" class="text-gray-300 hover:text-white transition duration-300">Misc</a>
                     <a href="about.html" class="text-indigo-400 font-semibold transition duration-300">About</a>
                 </nav>
                 <button id="mobile-menu-button" class="md:hidden">
@@ -230,7 +227,8 @@
             <a href="index.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-slate-800">English</a>
             <a href="techlish.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-slate-800">Techlish</a>
             <a href="mmo.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-slate-800">MMO</a>
-            <a href="deals.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-slate-800">Deals</a>
+            <a href="deal.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-slate-800">Deals</a>
+            <a href="misc.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-slate-800">Misc</a>
             <a href="about.html" class="block py-2 px-6 text-sm text-indigo-400 bg-slate-800">About</a>
         </div>
     </header>
@@ -245,15 +243,14 @@
                     <div class="orbit">
                         <div id="role-teacher" class="role-circle bg-sky-900/60 text-sky-300 border-sky-800 hover:bg-sky-800/80" style="animation-delay: 0s;">Teacher</div>
                         <div id="role-translator" class="role-circle bg-emerald-900/60 text-emerald-300 border-emerald-800 hover:bg-emerald-800/80" style="animation-delay: 0.1s;">Translator</div>
-                        <div id="role-specialist" class="role-circle bg-violet-900/60 text-violet-300 border-violet-800 hover:bg-violet-800/80" style="animation-delay: 0.2s;">Digital Commerce Specialist</div>
-                        <div id="role-researcher" class="role-circle bg-amber-900/60 text-amber-300 border-amber-800 hover:bg-amber-800/80" style="animation-delay: 0.3s;">Researcher</div>
-                        <div id="role-engineer" class="role-circle bg-slate-700/60 text-slate-300 border-slate-600 hover:bg-slate-600/80" style="animation-delay: 0.4s;">AI<br>Engineer</div>
-                        <!-- Thêm vai trò Validator với tone màu Đỏ sẫm/Crimson -->
-                        <div id="role-validator" class="role-circle bg-red-900/60 text-red-300 border-red-800 hover:bg-red-800/80" style="animation-delay: 0.5s;">Validator</div>
+                        <div id="role-affiliate" class="role-circle bg-rose-900/60 text-rose-300 border-rose-800 hover:bg-rose-800/80" style="animation-delay: 0.2s;">Affiliate<br>Marketer</div>
+                        <div id="role-specialist" class="role-circle bg-violet-900/60 text-violet-300 border-violet-800 hover:bg-violet-800/80" style="animation-delay: 0.3s;">Digital Commerce Specialist</div>
+                        <div id="role-researcher" class="role-circle bg-amber-900/60 text-amber-300 border-amber-800 hover:bg-amber-800/80" style="animation-delay: 0.4s;">Researcher</div>
+                        <div id="role-engineer" class="role-circle bg-slate-700/60 text-slate-300 border-slate-600 hover:bg-slate-600/80" style="animation-delay: 0.5s;">AI<br>Engineer</div>
+                        <div id="role-validator" class="role-circle bg-red-900/60 text-red-300 border-red-800 hover:bg-red-800/80" style="animation-delay: 0.6s;">Validator</div>
                     </div>
                 </div>
 
-                <!-- Tên uốn cong với SVG -->
                 <div id="curved-name-container" class="relative w-full flex justify-center h-20 mt-4 md:mt-0">
                     <svg id="curved-name" viewBox="0 0 400 100" class="absolute -top-4">
                         <path id="curve" d="M 50,60 A 150,150 0 0,1 350,60" fill="transparent" />
@@ -267,13 +264,8 @@
 
                 <div id="role-details-container" class="mt-4 mb-12">
                     <div id="role-details" class="max-w-4xl mx-auto backdrop-blur-sm p-4 md:p-8 rounded-xl shadow-lg transition-all duration-500 opacity-0 pointer-events-none text-left">
-                        
-                        <div id="details-content-container" class="space-y-2">
-                           <!-- Content will be injected here -->
-                        </div>
-
+                        <div id="details-content-container" class="space-y-2"></div>
                         <div id="gallery-wrapper"></div>
-
                         <div id="back-to-top-container" class="mt-8 text-center">
                             <button id="back-to-top-btn" title="Back to Top" class="p-3 rounded-full text-slate-300 hover:text-white transition-all duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-indigo-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -287,16 +279,15 @@
         </section>
     </main>
     
-    <!-- Image Gallery Modal -->
+    <!-- Modals -->
     <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50 p-4 transition-opacity duration-300">
         <span id="modal-close" class="absolute top-4 right-6 text-white text-4xl font-bold cursor-pointer hover:text-gray-400">&times;</span>
         <img id="modal-image" src="" alt="Enlarged image" class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-2xl">
     </div>
 
-    <!-- Info Modal -->
     <div id="info-modal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50 p-4 transition-opacity duration-300">
         <div class="digital-card rounded-xl w-full max-w-lg relative flex flex-col md:flex-row transform transition-all duration-300 scale-95 opacity-0">
-             <span id="info-modal-close" class="absolute top-3 right-4 text-gray-400 text-3xl font-bold cursor-pointer hover:text-white z-20">&times;</span>
+             <span id="info-modal-close" class="absolute top-3 right-4 text-gray-400 text-3xl font-bold Shalini cursor-pointer hover:text-white z-20">&times;</span>
             <div class="digital-card-logo w-full md:w-2/5 flex items-center justify-center p-6 md:border-r border-gray-700/50">
                 <img src="https://i.postimg.cc/FKTDRdDP/logo-D-1-remove-bg.png" alt="Logo" class="w-40 h-40">
             </div>
@@ -318,9 +309,7 @@
                 </div>
                 <div class="mt-6 pt-4 border-t border-gray-700/50 flex justify-center md:justify-start items-center space-x-5">
                      <a href="https://www.facebook.com/duynguyen2797/" target="_blank" class="social-icon-link text-gray-400 hover:text-[#1877F2]">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-7 h-7" viewBox="0 0 16 16">
-                          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-7 h-7" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
                     </a>
                      <a href="https://zalo.me/0902604061" target="_blank" class="social-icon-link opacity-80 hover:opacity-100">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/120px-Icon_of_Zalo.svg.png" alt="Zalo" class="w-7 h-7 object-contain">
@@ -348,8 +337,6 @@
             const galleryWrapper = document.getElementById('gallery-wrapper');
             const header = document.getElementById('header');
             const backToTopBtn = document.getElementById('back-to-top-btn');
-            
-            // Elements for centering effect
             const centerImage = document.querySelector('.center-image');
             const curvedNameContainer = document.getElementById('curved-name-container');
 
@@ -363,91 +350,104 @@
             const roleThemes = {
                 'role-teacher': { cardBg: 'bg-sky-900/40', borderColor: 'border-sky-800', titleColor: 'text-sky-400', headingColor: 'text-sky-300', bulletColor: 'text-sky-500', buttonBg: 'bg-sky-800', buttonHover: 'hover:bg-sky-700' },
                 'role-translator': { cardBg: 'bg-emerald-900/40', borderColor: 'border-emerald-800', titleColor: 'text-emerald-400', headingColor: 'text-emerald-300', bulletColor: 'text-emerald-500', buttonBg: 'bg-emerald-800', buttonHover: 'hover:bg-emerald-700' },
+                'role-affiliate': { cardBg: 'bg-rose-900/40', borderColor: 'border-rose-800', titleColor: 'text-rose-400', headingColor: 'text-rose-300', bulletColor: 'text-rose-500', buttonBg: 'bg-rose-800', buttonHover: 'hover:bg-rose-700' },
                 'role-specialist': { cardBg: 'bg-violet-900/40', borderColor: 'border-violet-800', titleColor: 'text-violet-400', headingColor: 'text-violet-300', bulletColor: 'text-violet-500', buttonBg: 'bg-violet-800', buttonHover: 'hover:bg-violet-700' },
                 'role-researcher': { cardBg: 'bg-amber-900/40', borderColor: 'border-amber-800', titleColor: 'text-amber-400', headingColor: 'text-amber-300', bulletColor: 'text-amber-500', buttonBg: 'bg-amber-800', buttonHover: 'hover:bg-amber-700' },
                 'role-engineer': { cardBg: 'bg-slate-800/60', borderColor: 'border-slate-700', titleColor: 'text-slate-400', headingColor: 'text-slate-300', bulletColor: 'text-slate-500', buttonBg: 'bg-slate-700', buttonHover: 'hover:bg-slate-600' },
-                'role-validator': { cardBg: 'bg-red-900/40', borderColor: 'border-red-800', titleColor: 'text-red-400', headingColor: 'text-red-300', bulletColor: 'text-red-500', buttonBg: 'bg-red-800', buttonHover: 'hover:bg-red-700' }
+                'role-validator': { cardBg: 'bg-red-950/60', borderColor: 'border-red-900', titleColor: 'text-red-400', headingColor: 'text-red-300', bulletColor: 'text-red-500', buttonBg: 'bg-red-900', buttonHover: 'hover:bg-red-800' }
             };
 
             const allThemeClasses = Object.values(roleThemes).reduce((acc, theme) => acc.concat(Object.values(theme)), []);
 
             const roleData = {
-                // Giữ nguyên dữ liệu cũ
                 'role-teacher': {
                     content: [
                         { type: 'heading', vi: 'Kinh nghiệm', en: 'Experience' },
                         { type: 'item', vi: '2015 – nay: Gia sư tiếng Anh K12, luyện giao tiếp cho người đi làm.', en: '2015 – now: English tutor for K12 students, communication skills training for working adults.' },
-                        { type: 'item', vi: '2021 – nay: Giáo viên tiếng Anh tại CiY Vietnam, thiết kế chương trình, tổ chức lớp học online, luyện Pre-IELTS/IELTS.', en: '2021 – now: English teacher at CiY Vietnam, curriculum design, online class organization, Pre-IELTS/IELTS preparation.' },
+                        { type: 'item', vi: '2021 – nay: Giáo viên tiếng Anh tại CiY Vietnam.', en: '2021 – now: English teacher at CiY Vietnam.' },
                         { type: 'heading', vi: 'Kỹ năng', en: 'Skills' },
-                        { type: 'item', vi: 'Sáng lập và quản trị website “Home of English”', en: 'Founder and administrator of the “Home of English” website' },
-                        { type: 'item', vi: 'Công bố nghiên cứu: “The Untranslatability in Translating English to Vietnamese and Vice Versa” (2021)', en: 'Published research: “The Untranslatability in Translating English to Vietnamese and Vice Versa” (2021)' },
-                        { type: 'item', vi: 'Đóng góp vào các dự án dịch thuật, biên tập và localize tài liệu VN ⇄ EN cho nhiều tổ chức', en: 'Contribute to translation, editing, and localization projects (VN ⇄ EN) for various organizations' },
-                        { type: 'item', vi: 'Ứng dụng AI vào dịch thuật', en: 'Applying AI to translation practice' }
+                        { type: 'item', vi: 'Thiết kế bài giảng sáng tạo, cá nhân hóa.', en: 'Creative, personalized lesson design.' }
                     ],
                     gallery: [
-                        { src: 'https://i.postimg.cc/2jsyjNHW/Screenshot-2025-09-09-075921.png', alt: 'Lightning Quiz Game' },
-                        { src: 'https://i.postimg.cc/zXTBV2Mc/Screenshot-2025-09-09-075945.png', alt: 'Family Feud Game' }
+                        { src: 'https://i.postimg.cc/2jsyjNHW/Screenshot-2025-09-09-075921.png', alt: 'Quiz' },
+                        { src: 'https://i.postimg.cc/zXTBV2Mc/Screenshot-2025-09-09-075945.png', alt: 'Game' }
                     ],
                     galleryTitle: "Teacher's Gallery"
                 },
                 'role-translator': { 
                     content: [
                         { type: 'heading', vi: 'Kinh nghiệm', en: 'Experience' },
-                        { type: 'item', vi: '2017 – 2020: Biên dịch sách, email, hội nghị; hiệu đính và biên tập bản dịch cho Alpha Book', en: '2017 – 2020: Translating books, emails, conferences; proofreading and editing for Alpha Book' },
-                        { type: 'item', vi: '2021 – 2022: Biên dịch, phiên dịch tài liệu và nội dung Service Learning cho Co-op Banks', en: '2021 – 2022: Translating and interpreting Service Learning documents and content for Co-op Banks' },
+                        { type: 'item', vi: '2017 – 2020: Biên dịch sách, hiệu đính cho Alpha Book.', en: '2017 – 2020: Translating books, proofreading for Alpha Book.' },
                         { type: 'heading', vi: 'Kỹ năng', en: 'Skills' },
-                        { type: 'item', vi: 'Dịch và hiệu đính tài liệu Anh – Việt', en: 'Translating and proofreading English – Vietnamese documents' },
-                        { type: 'item', vi: 'Phiên dịch hội nghị, sự kiện chuyên môn', en: 'Interpreting at conferences and professional events' }
+                        { type: 'item', vi: 'Dịch và hiệu đính tài liệu Anh – Việt.', en: 'Translating and proofreading EN-VN documents.' }
+                    ],
+                    gallery: [
+                        { src: 'https://i.postimg.cc/J7FvmbCn/a1.png', alt: 'Project 1' },
+                        { src: 'https://i.postimg.cc/44cqfYfQ/a2.png', alt: 'Project 2' },
+                        { src: 'https://i.postimg.cc/wjqGQFhw/a3.png', alt: 'Project 3' },
+                        { src: 'https://i.postimg.cc/8C3XDSxY/a4.png', alt: 'Project 4' },
+                        { src: 'https://i.postimg.cc/kggTbGmZ/a5.png', alt: 'Project 5' },
+                        { src: 'https://i.postimg.cc/HxwwK1mX/a6.png', alt: 'Project 6' },
+                        { src: 'https://i.postimg.cc/NFNHqgz9/a7.png', alt: 'Project 7' },
+                        { src: 'https://i.postimg.cc/pV1rH1dF/a8.png', alt: 'Project 8' }
+                    ],
+                    galleryTitle: "Projects"
+                },
+                'role-affiliate': {
+                    content: [
+                        { type: 'heading', vi: 'Lĩnh vực', en: 'Core Focus' },
+                        { type: 'item', vi: 'Xây dựng mạng lưới liên kết cho các sản phẩm công nghệ và dịch vụ số.', en: 'Building affiliate networks for tech products and digital services.' },
+                        { type: 'heading', vi: 'Kỹ năng', en: 'Skills' },
+                        { type: 'item', vi: 'Phân tích hành vi người dùng, tối ưu hóa tỷ lệ chuyển đổi (CRO).', en: 'User behavior analysis, Conversion Rate Optimization (CRO).' }
                     ]
                 },
                 'role-specialist': { 
                     content: [
                         { type: 'heading', vi: 'Kinh nghiệm', en: 'Experience' },
-                        { type: 'item', vi: '2022 – nay: Kinh doanh sản phẩm số và dịch vụ trực tuyến', en: '2022 – now: Selling digital products and online services' },
-                        { type: 'item', vi: 'Xây dựng, quản lý website bán hàng, kênh bán đa nền tảng', en: 'Building and managing sales websites, multi-platform channels' },
-                        { type: 'heading', vi: 'Kỹ năng', en: 'Skills' },
-                        { type: 'item', vi: 'Quản lý và vận hành kênh bán hàng số', en: 'Managing and operating digital sales channels' }
+                        { type: 'item', vi: '2022 – nay: Kinh doanh sản phẩm số.', en: '2022 – now: Digital product commerce.' }
                     ]
                 },
                 'role-researcher': { 
                     content: [
-                        { type: 'heading', vi: 'Kinh nghiệm', en: 'Experience' },
-                        { type: 'item', vi: '2020 – nay: Nghiên cứu viên độc lập lĩnh vực Ngôn ngữ học ứng dụng', en: '2020 – now: Independent researcher in Applied Linguistics' },
-                        { type: 'item', vi: '2021: Thực hiện và công bố nghiên cứu về dịch thuật song ngữ Anh – Việt', en: '2021: Conducted and published research on English–Vietnamese bilingual translation' },
-                        { type: 'heading', vi: 'Kỹ năng', en: 'Skills' },
-                        { type: 'item', vi: 'Phân tích dữ liệu, tổng hợp tài liệu học thuật', en: 'Data analysis and academic literature review' }
+                        { type: 'heading', vi: 'Lĩnh vực nghiên cứu', en: 'Research Interests' },
+                        { type: 'item', vi: 'Ngôn Ngữ Học', en: 'Linguistics' },
+                        { type: 'item', vi: 'Biên Phiên Dịch', en: 'Translation & Interpreting' },
+                        { type: 'item', vi: 'Ứng dụng AI trong dạy học', en: 'Apply AI in Teaching' },
+                        { type: 'heading', vi: 'Đóng góp', en: 'Contribution' },
+                        { 
+                            type: 'item', 
+                            vi: '<a href="https://www.atlantis-press.com/proceedings/asiacall-2-21/125967420" target="_blank" class="hover:underline italic">The Untranslatability in Translating English to Vietnamese and Vice Versa</a>', 
+                            en: '<a href="https://www.atlantis-press.com/proceedings/asiacall-2-21/125967420" target="_blank" class="hover:underline italic">The Untranslatability in Translating English to Vietnamese and Vice Versa</a>' 
+                        },
+                        { 
+                            type: 'item', 
+                            vi: '<a href="https://asiacall-acoj.org/index.php/journal/article/view/44" target="_blank" class="hover:underline italic">Exploring English Vocabulary Learning of Vietnamese Secondary School Students with VoiceGPT Assistance</a>', 
+                            en: '<a href="https://asiacall-acoj.org/index.php/journal/article/view/44" target="_blank" class="hover:underline italic">Exploring English Vocabulary Learning of Vietnamese Secondary School Students with VoiceGPT Assistance</a>' 
+                        }
                     ]
                 },
                 'role-engineer': { 
                     content: [
-                        { type: 'heading', vi: 'Kinh nghiệm', en: 'Experience' },
-                        { type: 'item', vi: '2021 – nay: Kỹ sư AI độc lập, tập trung vào ứng dụng AI trong giáo dục, dịch thuật và sáng tạo nội dung', en: '2021 – now: Independent AI Engineer, focusing on AI applications in education, translation, and content creation' },
-                        { type: 'item', vi: '2024 – nay: Thiết kế prompt, xây dựng pipeline cho các mô hình ngôn ngữ lớn (LLMs) và Stable Diffusion', en: '2024 – now: Designing prompts and building pipelines for large language models (LLMs) and Stable Diffusion' },
-                        { type: 'item', vi: 'Triển khai các dự án sản xuất nội dung AI: video AI, clone voice, tạo hình ảnh số, xây dựng hệ thống chatbot hỗ trợ học tập', en: 'Developing AI-powered content production projects: AI videos, voice cloning, digital images, and chatbot systems for learning support' },
                         { type: 'heading', vi: 'Kỹ năng', en: 'Skills' },
-                        { type: 'item', vi: 'Thiết kế prompt cho AI (ChatGPT, Gemini, DALL-E, MidJourney, Suno, v.v.)', en: 'Prompt engineering for AI (ChatGPT, Gemini, DALL-E, MidJourney, Suno, etc.)' },
-                        { type: 'item', vi: 'Xây dựng pipeline AI với ComfyUI, Stable Diffusion', en: 'Building AI pipelines with ComfyUI, Stable Diffusion' },
-                        { type: 'item', vi: 'Tích hợp AI vào website, ứng dụng giáo dục', en: 'Integrating AI into websites and educational applications' },
-                        { type: 'item', vi: 'Sử dụng Python cơ bản, quản lý dữ liệu số', en: 'Basic Python programming and digital data management' },
-                        { type: 'item', vi: 'Tư duy sáng tạo, giải quyết vấn đề nhanh, cập nhật công nghệ mới', en: 'Creative problem-solving and rapid technology adaptation' },
-                        { type: 'heading', vi: 'Đóng góp', en: 'Contributions' },
-                        { type: 'item', vi: 'Triển khai hệ thống chatbot và công cụ AI hỗ trợ giảng dạy, dịch thuật', en: 'Develop chatbots and AI tools for teaching and translation support' },
-                        { type: 'item', vi: 'Thiết kế và sản xuất nội dung AI cho các dự án giáo dục, truyền thông', en: 'Design and produce AI-generated content for educational and media projects' },
-                        { type: 'item', vi: 'Chia sẻ kiến thức AI, hướng dẫn sử dụng AI trong cộng đồng giáo viên, sinh viên', en: 'Share AI knowledge and provide guidance for teachers and students' },
-                        { type: 'item', vi: 'Tham gia phát triển, thử nghiệm các pipeline mới cho Generative AI', en: 'Participate in developing and testing new generative AI pipelines' }
+                        { type: 'item', vi: 'Thiết kế prompt (ChatGPT, Gemini, MidJourney).', en: 'Prompt engineering (ChatGPT, Gemini, MidJourney).' }
                     ]
                 },
                 'role-validator': {
                     content: [
-                        { type: 'heading', vi: 'Kinh nghiệm Nổi bật (Dự án 2026)', en: 'Key Experience (2026 Projects)' },
-                        { type: 'item', vi: 'Kiểm định Trích dẫn & Hồ sơ Pháp lý cho các dự án: Corporate Whistleblowing 2026, Iovino v. MSA, Marti MEMO.', en: 'Perform Legal Citation & Record Validation for projects including Corporate Whistleblowing 2026, Iovino v. MSA, and Marti MEMO.' },
-                        { type: 'item', vi: 'Thực hiện quy trình kiểm định nghiêm ngặt: Đối chiếu chéo trích dẫn pháp lý, án lệ, đạo luật và tang vật với hồ sơ gốc để đảm bảo tính chính xác tuyệt đối.', en: 'Execute rigorous validation processes: Cross-reference legal citations, case laws, statutes, and exhibits with original records to ensure absolute accuracy.' },
-                        { type: 'item', vi: 'Soạn thảo Báo cáo Kiểm định, đánh giá theo thang điểm H/P/L/N và trực tiếp xử lý trên tài liệu pháp lý.', en: 'Draft Validation Reports, evaluate claims using the H/P/L/N rating system, and directly mark up legal filings (Track Changes/Comments).' },
+                        { type: 'heading', vi: 'Công việc', en: 'Core' },
+                        { type: 'item', vi: 'Kiểm định trích dẫn pháp lý.', en: 'Legal citation validation.' },
+                        { type: 'item', vi: 'Xác minh tài liệu, hồ sơ và bằng chứng.', en: 'Document, record, and evidence verification.' },
+                        { type: 'item', vi: 'Kiểm tra quotation, citation và nguồn dẫn.', en: 'Review of quotations, citations, and source references.' },
+                        { type: 'item', vi: 'Rà soát nội dung do AI tạo ra.', en: 'AI-generated content validation.' },
+                        { type: 'item', vi: 'Soạn thảo báo cáo kiểm định.', en: 'Validation report preparation.' },
+                        { type: 'item', vi: 'Theo dõi lỗi, chỉnh sửa và kết quả xác minh.', en: 'Tracking of errors, corrections, and verification results.' },
                         { type: 'heading', vi: 'Kỹ năng & Phương pháp', en: 'Skills & Methodology' },
-                        { type: 'item', vi: 'Áp dụng Bộ 8 Tiêu chí Kiểm định: Tính nguyên bản, Ngữ cảnh, Nguồn trích dẫn, Tính toàn vẹn, v.v.', en: 'Apply the 8 Validation Criteria: Verbatim Accuracy, Context, Attribution, Completeness, etc.' },
-                        { type: 'item', vi: 'Tối ưu hóa "Quy trình Phối hợp AI - Con người": Sử dụng AI để rà soát dữ liệu lớn, đồng thời dùng tư duy phản biện để phát hiện lỗi "ảo giác" và xác nhận ngữ cảnh.', en: 'Optimize the "AI-Human Collaborative Workflow": Utilize AI for large-scale data review while applying human critical thinking to detect hallucinations and verify context.' },
-                        { type: 'item', vi: 'Quản lý danh mục chứng cứ, đối soát chéo và thiết lập hệ thống trích dẫn siêu liên kết trên tài liệu.', en: 'Manage Exhibit Lists, perform cross-referencing, and establish hyperlinked citation systems on legal documents.' },
-                        { type: 'item', vi: 'Sử dụng lợi thế dịch thuật để phân tích chiều sâu ngữ nghĩa, tránh các diễn giải sai lệch của AI.', en: 'Leverage Translation Advantage to analyze semantic depth and prevent AI misrepresentations.' },
+                        { type: 'item', vi: 'Áp dụng 8 tiêu chí kiểm định.', en: 'Apply the 8 validation criteria.' },
+                        { type: 'item', vi: 'Phân loại theo 4 mức kiểm định: H, P, L, N.', en: 'Classify findings into 4 validation levels: H, P, L, N.' },
+                        { type: 'item', vi: 'Đối chiếu chéo nhiều nguồn để kiểm tra độ chính xác.', en: 'Cross-check multiple sources to verify accuracy.' },
+                        { type: 'item', vi: 'Ứng dụng AI để xử lý tài liệu lớn, kết hợp rà soát thủ công.', en: 'Use AI for large-scale document review with human verification.' },
+                        { type: 'item', vi: 'Phát hiện AI hallucination, citation mismatch và factual inconsistency.', en: 'Detect AI hallucinations, citation mismatches, and factual inconsistencies.' },
+                        { type: 'item', vi: 'Tận dụng năng lực ngôn ngữ – dịch thuật để phân tích ngữ nghĩa, ngữ cảnh và diễn đạt pháp lý.', en: 'Leverage language and translation expertise to analyze meaning, context, and legal wording.' },
                         { type: 'heading', vi: 'Ghi nhận', en: 'Recognition' },
                         { type: 'item', vi: 'Mệnh danh là "Grim Reaper" của giới kiểm định: Không để lọt bất kỳ lỗi sai nào.', en: 'Dubbed the "Grim Reaper" of validation: Zero errors slip through.' },
                         { type: 'item', vi: 'Tốc độ kiểm định nhanh song hành với độ chính xác tuyệt đối.', en: 'Fast validation speed alongside absolute accuracy.' }
@@ -457,23 +457,19 @@
 
             function positionCircles() {
                 const radius = container.offsetWidth * 0.42; 
-                const angleStep = (2 * Math.PI) / circles.length; // Tự động chia đều cho 6 roles
+                const angleStep = (2 * Math.PI) / circles.length;
                 circles.forEach((circle, index) => {
                     const angle = index * angleStep - (Math.PI / 2);
                     const x = radius * Math.cos(angle) + container.offsetWidth / 2;
                     const y = radius * Math.sin(angle) + container.offsetHeight / 2;
-                    // Lệnh inline này sẽ bị class .centered-role ghi đè nhờ !important khi được kích hoạt
                     circle.style.left = `${x - circle.offsetWidth / 2}px`;
                     circle.style.top = `${y - circle.offsetHeight / 2}px`;
                 });
             }
             
             function applyTheme(theme) {
-                // Clean up previous theme classes
                 roleDetailsCard.classList.remove(...allThemeClasses);
                 backToTopBtn.classList.remove(...allThemeClasses);
-
-                // Apply new theme
                 roleDetailsCard.classList.add(theme.cardBg, theme.borderColor, 'border');
                 backToTopBtn.classList.add(theme.buttonBg, theme.buttonHover);
             }
@@ -482,10 +478,7 @@
                 detailsContentContainer.innerHTML = '';
                 galleryWrapper.innerHTML = '';
                 
-                let contentHtml = '';
-
-                // Desktop Titles & Mobile Title (Vietnamese)
-                contentHtml += `<div class="hidden md:grid grid-cols-2 gap-x-8">
+                let contentHtml = `<div class="hidden md:grid grid-cols-2 gap-x-8">
                                     <h4 class="${theme.titleColor} text-center text-xl font-bold">Tiếng Việt</h4>
                                     <h4 class="${theme.titleColor} text-center text-xl font-bold">English</h4>
                                 </div>
@@ -500,61 +493,41 @@
                         if (item.type === 'heading') {
                             const viPart = `<h5 class="font-bold ${theme.headingColor} mb-2 mt-6">${item.vi}</h5>`;
                             const enPart = `<h5 class="font-bold ${theme.headingColor} mb-2 mt-6">${item.en}</h5>`;
-                            
-                            // Gói từng heading vào một lưới 2 cột ngang nhau
-                            rowsHtml += `<div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 w-full">
-                                            <div>${viPart}</div>
-                                            <div class="hidden md:block">${enPart}</div>
-                                        </div>`;
+                            rowsHtml += `<div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 w-full"><div>${viPart}</div><div class="hidden md:block">${enPart}</div></div>`;
                             mobileEnHtml += enPart;
                         } else if (item.type === 'item') {
-                            const viPart = `<div class="flex text-gray-400 mb-3"><span class="${theme.bulletColor} mr-3 mt-1">&#8226;</span><p class="!m-0">${item.vi}</p></div>`;
-                            const enPart = `<div class="flex text-gray-400 mb-3"><span class="${theme.bulletColor} mr-3 mt-1">&#8226;</span><p class="!m-0">${item.en}</p></div>`;
-                            
-                            // Gói từng gạch đầu dòng vào một lưới 2 cột ngang nhau
-                            rowsHtml += `<div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 w-full">
-                                            <div>${viPart}</div>
-                                            <div class="hidden md:block">${enPart}</div>
-                                        </div>`;
+                            const viPart = `<div class="flex text-gray-400 mb-3"><span class="${theme.bulletColor} mr-3 mt-1">&#8226;</span><div class="!m-0">${item.vi}</div></div>`;
+                            const enPart = `<div class="flex text-gray-400 mb-3"><span class="${theme.bulletColor} mr-3 mt-1">&#8226;</span><div class="!m-0">${item.en}</div></div>`;
+                            rowsHtml += `<div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 w-full"><div>${viPart}</div><div class="hidden md:block">${enPart}</div></div>`;
                             mobileEnHtml += enPart;
                         }
                     });
                 }
                 
-                // Desktop + Mobile VI wrapper
                 contentHtml += `<div class="relative pb-4">
                                     <div class="hidden md:block absolute top-0 bottom-0 left-1/2 w-px ${theme.borderColor} transform -translate-x-1/2"></div>
                                     <div>${rowsHtml}</div>
-                               </div>`;
-                
-                // Mobile EN wrapper
-                contentHtml += `<div class="md:hidden">
+                               </div>
+                               <div class="md:hidden">
                                     <h4 class="text-center text-xl font-bold mb-4 mt-8 ${theme.titleColor}">English</h4>
                                     <div>${mobileEnHtml}</div>
                                 </div>`;
 
                 detailsContentContainer.innerHTML = contentHtml;
 
-
-                if (data && data.gallery && data.gallery.length > 0) {
+                if (data.gallery) {
                     const galleryContainer = document.createElement('div');
                     galleryContainer.className = 'mt-8';
                     galleryContainer.innerHTML = `<h5 class="font-bold text-gray-200 text-center mb-4 text-lg">${data.galleryTitle || 'Gallery'}</h5>`;
-
                     const grid = document.createElement('div');
                     grid.className = 'grid grid-cols-2 md:grid-cols-4 gap-4';
-                    
                     data.gallery.forEach(imgData => {
                         const img = document.createElement('img');
-                        img.src = imgData.src;
-                        img.alt = imgData.alt;
+                        img.src = imgData.src; img.alt = imgData.alt;
                         img.className = 'rounded-lg cursor-pointer gallery-image w-full h-auto object-cover aspect-video';
-                        img.addEventListener('click', () => {
-                            openModal(imageModal, () => { modalImage.src = img.src; });
-                        });
+                        img.addEventListener('click', () => { openModal(imageModal, () => { modalImage.src = img.src; }); });
                         grid.appendChild(img);
                     });
-
                     galleryContainer.appendChild(grid);
                     galleryWrapper.appendChild(galleryContainer);
                 }
@@ -562,88 +535,49 @@
 
             circles.forEach(circle => {
                 circle.addEventListener('click', () => {
-                    // Kích hoạt thẻ Details
                     roleDetailsCard.style.opacity = 1;
                     roleDetailsCard.style.pointerEvents = 'auto';
-                    
-                    // Logic xoáy gom vào giữa
                     circles.forEach(c => {
                         c.classList.remove('active', 'centered-role', 'gathered-role', 'fade-out');
-                        if (c !== circle) {
-                            c.classList.add('gathered-role');
-                        }
+                        if (c !== circle) c.classList.add('gathered-role');
                     });
-                    
                     circle.classList.add('active', 'centered-role');
                     centerImage.classList.add('fade-out');
                     curvedNameContainer.classList.add('fade-out');
-
-                    // Đóng băng toàn bộ vòng xoay
                     orbit.style.animationPlayState = 'paused';
                     circles.forEach(c => c.style.animationPlayState = 'paused');
 
-                    const roleId = circle.id;
-                    const data = roleData[roleId];
-                    const theme = roleThemes[roleId] || roleThemes['role-engineer'];
-
-                    if (data) {
-                        applyTheme(theme);
-                        renderContent(data, theme);
-                        
-                        const headerOffset = header.offsetHeight + 20;
-                        const elementPosition = roleDetailsCard.getBoundingClientRect().top + window.pageYOffset;
-                        window.scrollTo({ top: elementPosition - headerOffset, behavior: 'smooth' });
-                    }
-                });
-
-                circle.addEventListener('mouseenter', () => {
-                    if (!document.querySelector('.centered-role')) {
-                        orbit.style.animationPlayState = 'paused';
-                        circles.forEach(c => c.style.animationPlayState = 'paused');
-                    }
-                });
-                circle.addEventListener('mouseleave', () => {
-                    if (!document.querySelector('.centered-role')) {
-                        orbit.style.animationPlayState = 'running';
-                        circles.forEach(c => c.style.animationPlayState = 'running');
-                    }
+                    const theme = roleThemes[circle.id] || roleThemes['role-engineer'];
+                    applyTheme(theme);
+                    renderContent(roleData[circle.id], theme);
+                    const headerOffset = header.offsetHeight + 20;
+                    window.scrollTo({ top: roleDetailsCard.getBoundingClientRect().top + window.pageYOffset - headerOffset, behavior: 'smooth' });
                 });
             });
 
-            // Gán chức năng bung vòng tròn trở lại cho nút Back to Top
             backToTopBtn.addEventListener('click', () => {
                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                 
-                 // Khôi phục trạng thái các vòng tròn
                  circles.forEach(c => c.classList.remove('active', 'centered-role', 'gathered-role', 'fade-out'));
                  centerImage.classList.remove('fade-out');
                  curvedNameContainer.classList.remove('fade-out');
-
                  orbit.style.animationPlayState = 'running';
                  circles.forEach(c => c.style.animationPlayState = 'running');
-
                  roleDetailsCard.style.opacity = 0;
                  roleDetailsCard.style.pointerEvents = 'none';
             });
 
-            // --- Modal Logic ---
             function openModal(modal, callback) {
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
+                modal.classList.remove('hidden'); modal.classList.add('flex');
                 if (callback) callback();
-                setTimeout(() => {
-                    const card = modal.querySelector('.transform');
-                    if(card) card.classList.remove('scale-95', 'opacity-0');
-                }, 10);
+                setTimeout(() => { const card = modal.querySelector('.transform'); if(card) card.classList.remove('scale-95', 'opacity-0'); }, 10);
             }
 
             function closeModal(modal) {
                  const card = modal.querySelector('.transform');
-                 if(card) card.classList.add('scale-95', 'opacity-0');
-                 setTimeout(() => {
-                    modal.classList.add('hidden');
-                    modal.classList.remove('flex');
-                }, 300);
+                 if(card) {
+                    card.classList.add('scale-95', 'opacity-0');
+                 }
+                setTimeout(() => { modal.classList.add('hidden'); modal.classList.remove('flex'); }, 300);
             }
 
             imageModalClose.onclick = () => closeModal(imageModal);
@@ -653,14 +587,7 @@
             infoModal.onclick = (e) => { if (e.target === infoModal) closeModal(infoModal); }
 
             positionCircles();
-            window.addEventListener('resize', () => {
-                positionCircles();
-                const activeCircle = document.querySelector('.role-circle.active');
-                if (activeCircle) {
-                    const theme = roleThemes[activeCircle.id] || roleThemes['role-engineer'];
-                    renderContent(roleData[activeCircle.id], theme);
-                }
-            });
+            window.addEventListener('resize', positionCircles);
         });
     </script>
 </body>
